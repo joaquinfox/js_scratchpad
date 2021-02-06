@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <label for="">Name</label><input id="fname" type="text" name="fname" />
+      <label for="">Zone</label><input id="zone" type="text" name="zone" />
+      <button>Submit</button>
+    </form>
+    <p></p>
+
+    <script>
+      const nameInput = document.querySelector('#fname');
+      const zoneInput = document.querySelector('#zone');
+      const pEl = document.querySelector('p');
+      const formEl = document.querySelector('form');
+
+      formEl.addEventListener('submit', (e) => {
+        e.preventDefault();
+        validateInputs();
+      });
+
+      function validateInputs() {
+        if (!nameInput.value || !zoneInput.value) {
+          pEl.textContent = 'Please fill all fields';
+        } else {
+          pEl.textContent = '';
+        }
+      }
+    </script>
+  </body>
+</html>
