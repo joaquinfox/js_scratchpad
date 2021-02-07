@@ -152,6 +152,24 @@ function countWords(str, word) {
   return word + ' : ' + count;
 }
 
-console.log(
-  countWords('dog eat dog, dog eat cat, cat eat mouse, mouse eat dog', 'dog')
-);
+// console.log(
+//   countWords('dog eat dog, dog eat cat, cat eat mouse, mouse eat dog', 'dog')
+// );
+
+/*
+Given the string 
+let str = 'oy ouy yy yiae'
+use reduce to:
+1. return the last vowel group in the string.
+2. return all of the vowels in the string.
+3. return the length of the last vowel group.
+4. return the length of the longest vowel group in the string.
+
+*/
+
+let str = 'oy ouy aaaaaaa yy yiae';
+str = str.split(/[^aeiou]/gi);
+// console.log(str);
+// console.log(str.reduce((a, c) => (a, c)));
+// console.log(str.reduce((a, c) => a + c));
+console.log(str.reduce((a, c) => Math.max(a, c.length), 0));
