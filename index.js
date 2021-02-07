@@ -92,12 +92,66 @@ let foo = ['abc', 'def', 'ghi&'];
 
 /* Constructor function and keyword "this" */
 
-function Person(name, zone) {
-  this.name = name;
-  this.zone = zone;
-  this.tagline = function () {
-    console.log(`I am ${this.name} from zone ${this.zone}`);
-  };
+function Monster(species, toothSize, venom) {
+  // this.species = species;
+  // this.toothSize = toothSize;
+  // this.venom = venom;
+
+  console.log(
+    `I am a ${species} and I will bite you with my ${toothSize} teeth and inject you with my ${venom} venom`
+  );
 }
-let bob = new Person('Bob', 'blue');
-bob.tagline();
+
+// Monster('reptile', 'green, gooey', 'fire');
+// let buggaBoo = new Monster('reptile', 'medium serrated', 'flesh destroying');
+
+// buggaBoo.tagline();
+
+class Cat {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  tagline() {
+    console.log(`I am ${this.name} and I am ${this.age} years old`);
+  }
+}
+
+class Dog extends Cat {
+  bark() {
+    console.log(`bow wowbow wow bow wow bow bow wow`);
+  }
+}
+let fluffy = new Cat('Fluffy', 5);
+// fluffy.tagline();
+let dingdong = new Dog('Ding', 2);
+// dingdong.tagline();
+// dingdong.bark();
+
+/*CSS specificity rules
+1. inline
+2. id
+3. classes and pseudo classes
+4. html elements and pseudo elements
+
+*/
+
+// Given a string and a word, count the number of occurrences in the string, of that word. ' dog, dog, cat' returns dog 2.
+function countWords(str, word) {
+  let count = 0;
+  str = str.replace(/,/g, '').split(' ');
+  // str = str.split(' ').join(' ');
+  console.log(str);
+  for (let i = 0; i <= str.length; i++) {
+    if (str[i] === word) {
+      count++;
+    }
+    // console.log(str[i]);
+  }
+  return word + ' : ' + count;
+}
+
+console.log(
+  countWords('dog eat dog, dog eat cat, cat eat mouse, mouse eat dog', 'dog')
+);
