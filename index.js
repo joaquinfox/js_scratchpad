@@ -49,7 +49,6 @@ let input = [
 ];
 
 function makeZero(arr) {
-  // colArr [true, ]
   const colArr = [],
     rowArr = [];
   for (let a = 0; a < arr.length; a++) {
@@ -68,7 +67,6 @@ function makeZero(arr) {
     }
   }
   return arr;
-  // console.log(colArr, rowArr);
 }
 
 console.log(makeZero(input));
