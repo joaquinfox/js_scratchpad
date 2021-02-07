@@ -69,4 +69,35 @@ function makeZero(arr) {
   return arr;
 }
 
-console.log(makeZero(input));
+// console.log(makeZero(input));
+
+/*
+Given the string 'ABC', slice or substring 'A'
+*/
+
+// console.log('ABC'.slice(0, 1));
+
+/*
+1. Given a string, remove the last character in the string
+2. Given an array of strings, remove the last character of the last array element
+foo = ['abc','def','ghi&'] --> ['abc','def','ghi']
+
+*/
+// let foo = 'abc';
+// console.log(foo.slice(0, foo.length - 1));
+
+let foo = ['abc', 'def', 'ghi&'];
+// let step1 = foo.join();
+// console.log(step1.slice(0, step1.length - 1));
+
+/* Constructor function and keyword "this" */
+
+function Person(name, zone) {
+  this.name = name;
+  this.zone = zone;
+  this.tagline = function () {
+    console.log(`I am ${this.name} from zone ${this.zone}`);
+  };
+}
+let bob = new Person('Bob', 'blue');
+bob.tagline();
