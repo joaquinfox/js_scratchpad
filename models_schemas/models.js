@@ -16,6 +16,7 @@ const userSchema = new mongoose.Schema({
 });
 
 const User = mongoose.model('User', userSchema);
+
 // User.create({ name: 'Bob', zone: 'Green' }, (err, user) => {
 //   if (err) {
 //     console.log(err);
