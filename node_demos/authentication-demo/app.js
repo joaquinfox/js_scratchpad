@@ -20,6 +20,7 @@ app.use(
     saveUninitialized: false,
   })
 );
+app.use(express.urlencoded({ extended: true }));
 app.use(passport.initialize());
 app.use(passport.session());
 passport.use(new LocalStrategy(User.authenticate()));
@@ -29,13 +30,14 @@ passport.deserializeUser(User.deserializeUser());
 app.get('/', (req, res) => {
   res.render('landing');
 });
-app.get('/secret', (req, res) => {
+app.get('/secret', isLoggedIn, (req, res) => {
   res.render('secret');
 });
 app.get('/register', (req, res) => {
   res.render('register');
 });
 app.post('/register', (req, res) => {
+  console.log('FLAGGGG', req.body);
   User.register(
     new User({ username: req.body.username }),
     req.body.password,
@@ -69,6 +71,12 @@ app.get('/logout', (req, res) => {
   res.redirect('/');
 });
 
+function isLoggedIn(req, res, next) {
+  if (req.isAuthenticated()) {
+    return next();
+  }
+  res.redirect('back');
+}
 app.listen(PORT, () => {
   console.log(`listening on ${PORT}`);
 });
