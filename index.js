@@ -184,3 +184,16 @@ Array.prototype.myForEach = function (fx) {
 };
 
 // console.log([1, 2, 3].myForEach((i) => i * 2));
+
+// What does the keyword new do? Demo it in a constructor function.
+function Monster(species, temperment) {
+  this.species = species;
+  this.temperment = temperment;
+  this.tagline = function () {
+    console.log(`I am a ${this.temperment} ${this.species}`);
+  };
+}
+
+let slither = new Monster('serpent', 'lonely');
+
+slither.tagline();
