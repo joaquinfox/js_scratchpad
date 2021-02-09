@@ -221,4 +221,18 @@ const Comment = {
   },
 };
 
-Comment.print();
+// Comment.print();
+
+// Given below, return
+// [ 'least', 'more', 'still-more', 'most' ]
+
+var list = { 'still-more': 100, more: 75, most: 116, least: 15 };
+// sort the object and return the sorted keys
+const step1 = Object.entries(list)
+  .sort(([, a], [, b]) => b - a)
+  .reduce((a, [b, c]) => ({ ...a, [b]: c }), {});
+const step2 = [];
+for (let i in step1) {
+  step2.push(i);
+}
+console.log(step2.reverse());
