@@ -196,4 +196,29 @@ function Monster(species, temperment) {
 
 let slither = new Monster('serpent', 'lonely');
 
-slither.tagline();
+// slither.tagline();
+
+/*
+Define a comments object with a data array and 
+a  print method that prints each item in data, 
+and then  invoke the method.
+
+*/
+// const Comment = {};
+// Comment.data = [1, 2, 3];
+// Comment.print = function () {
+//   for (let i = 0; i < this.data.length; i++) {
+//     console.log(this.data[i]);
+//   }
+// };
+
+const Comment = {
+  data: [1, 2, 3],
+  print: function () {
+    for (let i = 0; i < this.data.length; i++) {
+      console.log(this.data[i]);
+    }
+  },
+};
+
+Comment.print();
