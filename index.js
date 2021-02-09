@@ -235,4 +235,4 @@ const step2 = [];
 for (let i in step1) {
   step2.push(i);
 }
-console.log(step2.reverse());
+// console.log(step2.reverse());
