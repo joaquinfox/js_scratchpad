@@ -172,4 +172,15 @@ str = str.split(/[^aeiou]/gi);
 // console.log(str);
 // console.log(str.reduce((a, c) => (a, c)));
 // console.log(str.reduce((a, c) => a + c));
-console.log(str.reduce((a, c) => Math.max(a, c.length), 0));
+// console.log(str.reduce((a, c) => Math.max(a, c.length), 0));
+
+// Write a higher order function myForEach() which acts like forEach.
+// let colors = ['red','green','purple', 'blue'];
+
+Array.prototype.myForEach = function (fx) {
+  for (let i = 0; i < this.length; i++) {
+    console.log(fx(this[i]));
+  }
+};
+
+// console.log([1, 2, 3].myForEach((i) => i * 2));
