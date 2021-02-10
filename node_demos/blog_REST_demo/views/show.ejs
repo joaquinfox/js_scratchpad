@@ -1,0 +1,11 @@
+<%- include('partials/header.ejs') %>
+
+<div class="ui container main">
+  <h2><%= blog.title %></h2>
+  <img src="<%= blog.image %>" width="100px" alt="" />
+  <p><%= blog.content %></p>
+  <span><%= blog.created %></span>
+  <button><a href="/blogs/<%= blog._id %>/edit">Edit</a></button>
+</div>
+
+<%- include('partials/footer.ejs') %>
