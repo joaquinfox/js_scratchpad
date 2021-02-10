@@ -1,0 +1,17 @@
+.item {
+  font-size: 1.5rem;
+  letter-spacing: 3px;
+}
+
+h1.ui.header {
+  text-align: center;
+  color: purple;
+  /* font-weight: 900; */
+  font-size: 600%;
+  letter-spacing: -15px;
+}
+.container.text {
+  padding: 2rem 8rem;
+  background-color: orange;
+  color: whitesmoke;
+}
