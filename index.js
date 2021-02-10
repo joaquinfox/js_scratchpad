@@ -236,3 +236,38 @@ for (let i in step1) {
   step2.push(i);
 }
 // console.log(step2.reverse());
+
+let bar = ['abc', 'def', 'ghi&'];
+const stringJoin = foo.join(' ');
+// console.log(stringJoin.slice(0, stringJoin.length - 1));
+// const step2 = step1.slice(step1.length - 1);
+
+// var Bob = {
+//   name: 'Bob',
+//   sayHi: function () {
+//     setTimeout(
+//       function () {
+//         console.log('Hi ' + this.name);
+//       }.bind(this),
+//       4000
+//     );
+//   },
+// };
+// console.log(Bob.sayHi());
+
+// Given code below, demonstrate partial application using the bind method of assigning keyword this
+var Bob = {
+  name: 'Bob',
+  sayHi: function () {
+    return 'Hi, my name is ' + this.name;
+  },
+  addNumbers: function (a, b, c, d) {
+    return this.name + ' just calculated ' + (a + b + c + d);
+  },
+};
+
+var Sue = {
+  name: 'Sue',
+};
+let sueCount = Bob.addNumbers.bind(Sue, 1, 2);
+console.log(sueCount(3, 4));
