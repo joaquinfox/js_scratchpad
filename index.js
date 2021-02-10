@@ -295,3 +295,11 @@ function dateFormatter() {
 }
 
 dateFormatter();
+
+// Without using toString(), script a recursive conversion to binary. Given a number, express it in binary form.
+
+function makeBinary(n) {
+  if (n < 1) return '';
+  return makeBinary(Math.floor(n / 2)) + (n % 2);
+}
+console.log(makeBinary(21));
