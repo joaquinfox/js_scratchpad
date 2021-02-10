@@ -1,0 +1,30 @@
+<%- include('../partials/header') %>
+<div class="ui text container">
+  <h1 class="ui header">YelpCamp</h1>
+  <div class="ui image small">
+    <img src="<%= camp.image %>" alt="" />
+  </div>
+  <div class="content">
+    <div class="ui header"><%= camp.name %></div>
+    <div class="description"><%= camp.description %></div>
+    <% camp.comments.forEach((comment)=>{ %>
+    <h3>Comments</h3>
+    <button><a href="/campgrounds/<%= camp._id %>/comments/new">Add a comment</a></button>
+    <p class="ui header">By <%= comment.author %></p>
+    <p><%= comment.text %></p>
+    <div class='field'>
+      <a class="ui tiny green inverted button" href="<%= camp._id%>/comments/<%= comment._id %>/edit">Edit</a>
+      <form action="/campgrounds/<%= camp._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
+        <button class="ui tiny red inverted button">Delete</button>
+      </form>
+    </div>
+    <% }) %>
+    <div class='field'>
+      <a class="ui green button" href="<%= camp._id%>/edit">Edit</a>
+      <form action="/campgrounds/<%= camp._id %>?_method=DELETE" method="POST">
+        <button class="ui red button">Delete</button>
+    </div>
+    </form>
+  </div>
+</div>
+<%- include('../partials/footer') %>

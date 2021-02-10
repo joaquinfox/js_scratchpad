@@ -256,18 +256,42 @@ const stringJoin = foo.join(' ');
 // console.log(Bob.sayHi());
 
 // Given code below, demonstrate partial application using the bind method of assigning keyword this
-var Bob = {
-  name: 'Bob',
-  sayHi: function () {
-    return 'Hi, my name is ' + this.name;
-  },
-  addNumbers: function (a, b, c, d) {
-    return this.name + ' just calculated ' + (a + b + c + d);
-  },
-};
+// var Bob = {
+//   name: 'Bob',
+//   sayHi: function () {
+//     return 'Hi, my name is ' + this.name;
+//   },
+//   addNumbers: function (a, b, c, d) {
+//     return this.name + ' just calculated ' + (a + b + c + d);
+//   },
+// };
 
-var Sue = {
-  name: 'Sue',
-};
-let sueCount = Bob.addNumbers.bind(Sue, 1, 2);
-console.log(sueCount(3, 4));
+// var Sue = {
+//   name: 'Sue',
+// };
+// let sueCount = Bob.addNumbers.bind(Sue, 1, 2);
+// console.log(sueCount(3, 4));
+
+// Date formater
+function dateFormatter() {
+  var months = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December',
+  ];
+  let date = new Date();
+  console.log(
+    `${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`
+  );
+}
+
+dateFormatter();
