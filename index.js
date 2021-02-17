@@ -302,4 +302,18 @@ function makeBinary(n) {
   if (n < 1) return '';
   return makeBinary(Math.floor(n / 2)) + (n % 2);
 }
-console.log(makeBinary(21));
+// console.log(makeBinary(21));
+
+// const maxSpeed = {
+//   car: 300,
+//   bike: 60,
+//   motorbike: 200,
+//   airplane: 1000,
+//   helicopter: 400,
+//   rocket: 8 * 60 * 60,
+// };
+
+let stepA = Object.entries(maxSpeed)
+  .sort(([, a], [, b]) => b - a)
+  .reduce((a, [b, c]) => ({ ...a, [b]: c }), {});
+console.log(stepA);
