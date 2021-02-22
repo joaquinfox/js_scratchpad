@@ -347,7 +347,34 @@ let makeTree = (categories, parent) => {
     .forEach((c) => (node[c.id] = makeTree(categories, c.id)));
   return node;
 };
-
 console.log(JSON.stringify(makeTree(categories, null), null, 2));
+// console.log(JSON.stringify(makeTree(categories, null), null, 2));
 // Math.floor(Math.random()*(max-min))+min
 // console.log(Math.floor(Math.random() * 6) + 5);
+
+// Download an image in Node
+
+const numericFormatter = (template, string) => {
+  let x = 0;
+  return template.replace(/#/g, () => x++);
+};
+// console.log(numericFormatter('## ### ## ###', '1234567891'));
+
+var person = {
+  firstName: 'Ellie',
+  sayHi: function () {
+    return 'Hi ' + this.firstName;
+  },
+  determineContext: function () {
+    return this === person;
+  },
+  dogs: {
+    myOwnerIs: function () {
+      return 'Hello, my owner is ' + this.firstName;
+    },
+    determineContext: function () {
+      return this === person;
+    },
+  },
+};
+// console.log(person.dogs.myOwnerIs.call(person));
