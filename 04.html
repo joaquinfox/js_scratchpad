@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <p>
+      Click the button to set "blue", "house" and "car" to upper-case, in the
+      paragraph below:
+    </p>
+
+    <p id="demo">Mr Blue has a blue house and a blue car.</p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <script>
+      function myFunction() {
+        let target = document.querySelector('#demo').innerText;
+        let action = target.replace(/blue|house|car/gi, (x) => x.toUpperCase());
+        document.querySelector('#demo').innerText = action;
+      }
+    </script>
+  </body>
+</html>
