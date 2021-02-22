@@ -325,3 +325,8 @@ function arrayDoubler(arr) {
   return [arr[0] * 2, ...arrayDoubler(arr.slice(1))];
 }
 // console.log(arrayDoubler([1, 2, 3]));
+
+function digitalRoot(n) {
+  return ((n - 1) % 9) + 1;
+}
+console.log(digitalRoot(546));
