@@ -329,4 +329,25 @@ function arrayDoubler(arr) {
 function digitalRoot(n) {
   return ((n - 1) % 9) + 1;
 }
-console.log(digitalRoot(546));
+// console.log(digitalRoot(546));
+let categories = [
+  { id: 'animals', parent: null },
+  { id: 'mammals', parent: 'animals' },
+  { id: 'cats', parent: 'mammals' },
+  { id: 'dogs', parent: 'mammals' },
+  { id: 'chihuahua', parent: 'dogs' },
+  { id: 'labrador', parent: 'dogs' },
+  { id: 'persian', parent: 'cats' },
+  { id: 'siamese', parent: 'cats' },
+];
+let makeTree = (categories, parent) => {
+  let node = {};
+  categories
+    .filter((c) => c.parent === parent)
+    .forEach((c) => (node[c.id] = makeTree(categories, c.id)));
+  return node;
+};
+
+console.log(JSON.stringify(makeTree(categories, null), null, 2));
+// Math.floor(Math.random()*(max-min))+min
+// console.log(Math.floor(Math.random() * 6) + 5);
