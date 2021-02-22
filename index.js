@@ -294,7 +294,7 @@ function dateFormatter() {
   );
 }
 
-dateFormatter();
+// dateFormatter();
 
 // Without using toString(), script a recursive conversion to binary. Given a number, express it in binary form.
 
@@ -316,4 +316,12 @@ function makeBinary(n) {
 let stepA = Object.entries(maxSpeed)
   .sort(([, a], [, b]) => b - a)
   .reduce((a, [b, c]) => ({ ...a, [b]: c }), {});
-console.log(stepA);
+// console.log(stepA);
+
+// div:nth-of-type(3) p{}
+
+function arrayDoubler(arr) {
+  if (arr.length < 1) return [];
+  return [arr[0] * 2, ...arrayDoubler(arr.slice(1))];
+}
+// console.log(arrayDoubler([1, 2, 3]));
