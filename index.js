@@ -378,3 +378,4 @@ var person = {
   },
 };
 console.log(person.dogs.myOwnerIs.call(person));
+// foo foo bar
