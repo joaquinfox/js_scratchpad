@@ -377,5 +377,59 @@ var person = {
     },
   },
 };
-console.log(person.dogs.myOwnerIs.call(person));
+// console.log(person.dogs.myOwnerIs.call(person));
 // foo foo bar
+
+var person = {
+  firstName: 'Ellie',
+  sayHi: function () {
+    return 'Hi ' + this.firstName;
+  },
+  determineContext: function () {
+    return this === person;
+  },
+  dogs: {
+    myOwnerIs: function () {
+      return 'Hello, my owner is ' + this.firstName;
+    },
+    determineContext: function () {
+      return this === person;
+    },
+  },
+};
+// console.log(person.dogs.myOwnerIs.call(person));
+
+// function numFormatter(template, str) {
+//   let x = 0;
+//   return template.replace(/[#|&|$]/g, () => str[x++]);
+// }
+// console.log(numFormatter('## #$# &# ###', 'abcdefghij'));
+
+// div:nth-of-type(3) p{}
+
+// Write  try catch block
+
+// try {
+//   consoe.log('hanga banga');
+// } catch (error) {
+//   console.log('ERROR', error.message || error);
+//   // throw error;
+// }
+
+//  Write a program that accepts one or more numbers as command-line arguments
+// and prints the sum of those numbers to the console (stdout).
+
+// console.log(
+//   process.argv
+//     .slice(2)
+//     .map((i) => Number(i))
+//     .reduce((a, c) => a + c)
+// );
+const http = require('http');
+http
+  .createServer((req, res) => {
+    res.writeHead(200, { 'Content-Tyoe': 'text/plain' });
+    res.write('Hanga Banga Boo');
+    res.end();
+  })
+  .listen(8080);
