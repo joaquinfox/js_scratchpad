@@ -347,7 +347,7 @@ let makeTree = (categories, parent) => {
     .forEach((c) => (node[c.id] = makeTree(categories, c.id)));
   return node;
 };
-console.log(JSON.stringify(makeTree(categories, null), null, 2));
+// console.log(JSON.stringify(makeTree(categories, null), null, 2));
 // console.log(JSON.stringify(makeTree(categories, null), null, 2));
 // Math.floor(Math.random()*(max-min))+min
 // console.log(Math.floor(Math.random() * 6) + 5);
@@ -377,4 +377,4 @@ var person = {
     },
   },
 };
-// console.log(person.dogs.myOwnerIs.call(person));
+console.log(person.dogs.myOwnerIs.call(person));
