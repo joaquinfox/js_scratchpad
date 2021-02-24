@@ -425,11 +425,87 @@ var person = {
 //     .map((i) => Number(i))
 //     .reduce((a, c) => a + c)
 // );
-const http = require('http');
-http
-  .createServer((req, res) => {
-    res.writeHead(200, { 'Content-Tyoe': 'text/plain' });
-    res.write('Hanga Banga Boo');
-    res.end();
-  })
-  .listen(8080);
+// const http = require('http');
+// http
+//   .createServer((req, res) => {
+//     res.writeHead(200, { 'Content-Tyoe': 'text/plain' });
+//     res.write('Hanga Banga Boo');
+//     res.end();
+//   })
+//   .listen(8080);
+
+// const myPromise = new Promise((resolve, reject) => {
+//   resolve(10);
+//   reject();
+// });
+
+// console.log(myPromise);
+
+// function getTemp() {
+//   return new Promise((resolve, reject) => {
+//     const delay = Math.floor(Math.random() * (10000 - 1000 + 1) + 1000);
+//     const temp = Math.floor(Math.random() * (500 - 200 + 1)) + 200;
+//     setTimeout(() => {
+//       if (temp < 300) {
+//         reject(`Too cold`);
+//       } else {
+//         resolve(`All bueno`);
+//       }
+//     }, delay);
+//   });
+// }
+
+// getTemp()
+//   .then((result) => console.log(result))
+//   .catch((error) => console.log(error));
+// console.log(getTemp);
+// console.log(result);
+
+// const myPromise = new Promise((resolve, reject) => {
+//   resolve(3);
+//   reject('no good');
+// });
+
+// myPromise.then((res) => console.log(res)).catch((err) => console.log(err));
+
+// Error handling with async await
+
+// const someFoo = async () => {
+//   try {
+//     consoe.log(`hanga banga boo`);
+//   } catch (err) {
+//     console.log(err.message);
+//     // throw new Error();
+//   }
+// };
+// someFoo();
+
+// const fs = require('fs-extra');
+
+// fs.readFileSync('./export.js');
+
+const palindromeChecker = (str) => {
+  let backIdx = str.length - 1;
+  let frontIdx = 0;
+  while (frontIdx < backIdx) {
+    if (str[frontIdx].match(/[\s|_|-]/g)) {
+      console.log('front match');
+      frontIdx++;
+      continue;
+    }
+    if (str[backIdx].match(/[\s|_|-]/g)) {
+      console.log('back match');
+      backIdx--;
+      continue;
+    }
+    if (str[frontIdx] !== str[backIdx]) {
+      return false;
+    }
+
+    frontIdx++;
+    backIdx--;
+  }
+  return true;
+};
+
+console.log(palindromeChecker('0_0 (: /-\\ :) 0-0'));
