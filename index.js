@@ -508,4 +508,18 @@ const palindromeChecker = (str) => {
   return true;
 };
 
-console.log(palindromeChecker('0_0 (: /-\\ :) 0-0'));
+// console.log(palindromeChecker('0_0 (: /-\\ :) 0-0'));
+
+// let bam = 'abcde%';
+
+// const removeLastChar = (str) => {
+//   str = str.replace(/.$/g, '');
+//   return str;
+// };
+// console.log(removeLastChar(bam));
+// let bam = ['one', 'two', 'three*'];
+// const removeLastChar = (arr) => {
+//   let str = arr.join(' ');
+//   return str.replace(/.$/g, '').split(' ');
+// };
+// console.log(removeLastChar(bam));
