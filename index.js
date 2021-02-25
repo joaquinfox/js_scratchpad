@@ -538,3 +538,38 @@ foo = ['abc','def','ghi&'] --> ['abc','def','ghi']
 //   .reduce((a, [b, c]) => ({ ...a, [b]: c }), {});
 
 // console.log(step1);
+
+// class Point {
+//   constructor(x, y) {
+//     this.x = x;
+//     this.y = y;
+//   }
+//   distanceFrom = function (otherX, otherY) {
+//     otherX = Number(otherX);
+//     otherY = Number(otherY);
+//     return Math.sqrt((this.y - otherY) / (this.x - otherX));
+//   };
+// }
+
+// let foo = new Point(8, 2);
+// console.log(foo.distanceFrom(77, 43));
+
+// function Monster(type, temper, name) {
+//   this.name = name;
+//   this.type = type;
+//   this.temper = temper;
+// }
+
+// let zygor = new Monster('Cyclops', 'bellacose', 'Zygor');
+// zygor.tagLine = function () {
+//   console.log(`I am a ${this.type} and I am very ${this.temper}`);
+// };
+
+// let zelda = new Monster('Vampire', 'ambiguos', 'Zelda');
+
+// Monster.prototype.jumpingJacks = function () {
+//   console.log(` I am ${this.name} and I jump jump jump!`);
+// };
+// // zygor.tagLine.call(zelda);
+// zelda.jumpingJacks();
+// zygor.jumpingJacks();
