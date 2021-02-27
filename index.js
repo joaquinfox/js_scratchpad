@@ -573,3 +573,11 @@ foo = ['abc','def','ghi&'] --> ['abc','def','ghi']
 // // zygor.tagLine.call(zelda);
 // zelda.jumpingJacks();
 // zygor.jumpingJacks();
+
+// const data = require('../data.txt');
+// const fs = require(
+
+// const removeLastChar = (arr) => {
+//   return arr.join(' ').replace(/.$/g, '');
+// };
+// console.log(removeLastChar(['abc', 'def', 'ghi&']));
