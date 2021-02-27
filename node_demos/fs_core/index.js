@@ -66,3 +66,45 @@
 //   }, {});
 
 // console.log(output);
+
+// let categories = [
+//   { id: 'animals', parent: null },
+//   { id: 'mammals', parent: 'animals' },
+//   { id: 'cats', parent: 'mammals' },
+//   { id: 'dogs', parent: 'mammals' },
+//   { id: 'chihuahua', parent: 'dogs' },
+//   { id: 'labrador', parent: 'dogs' },
+//   { id: 'persian', parent: 'cats' },
+//   { id: 'siamese', parent: 'cats' },
+// ];
+
+// const makeTree = (array, parent) => {
+//   let container = {};
+//   array
+//     .filter((item) => item.parent === parent)
+//     .forEach((item) => {
+//       container[item.id] = makeTree(array, item.id);
+//     });
+//   return container;
+//   //   return array;
+// };
+
+// console.log(JSON.stringify(makeTree(categories, null), null, 2));
+
+// const evalTemp = () => {
+//   return new Promise((resolve, reject) => {
+//     let temp = Math.flor(Math.random() * 500 + 100);
+//     setTimeout(() => {
+//       if (temp < 200) {
+//         reject(`Too cold. Temp: ${temp}`);
+//       } else if (temp > 400) {
+//         resolve(`Too hot. Temp: ${temp}`);
+//       } else {
+//         resolve(`Just right. Temp: ${temp}`);
+//       }
+//     }, 4000);
+//   });
+// };
+
+// evalTemp().then((res) => console.log(res));
+//   .catch((err) => console.log(err.message));
