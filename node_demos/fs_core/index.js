@@ -51,3 +51,18 @@
 // evalTemp()
 //   .then((res) => console.log(res))
 //   .catch((err) => console.log(err));
+
+// const fs = require('fs-extra');
+// let output = fs.readFileSync('../../../data.txt', 'utf8');
+
+// output = output
+//   .trim()
+//   .split('\n')
+//   .map((order) => order.split('\t'))
+//   .reduce((a, c) => {
+//     a[c[0]] = [];
+//     a[c[0]].push({ name: c[1], price: c[2], quantity: c[3] });
+//     return a;
+//   }, {});
+
+// console.log(output);
