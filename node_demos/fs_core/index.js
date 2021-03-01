@@ -135,3 +135,23 @@
 //   .reduce((a, [b, c]) => ({ ...a, [b]: c }), {});
 
 // console.log(output);
+
+// function evaluateTemp() {
+//   let temp = Math.floor(Math.random() * 500) + 100;
+//   let delay = Math.floor(Math.random() * 5000) + 1000;
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       if (temp < 200) {
+//         reject(`Too cold: ${temp}`);
+//       } else if (temp > 400) {
+//         reject(`Too hot: ${temp}`);
+//       } else {
+//         resolve(`Just right: ${temp}`);
+//       }
+//     }, delay);
+//   });
+// }
+
+// evaluateTemp()
+//   .then((res) => console.log(res))
+//   .catch((err) => console.log(err));
