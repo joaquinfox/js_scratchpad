@@ -40,34 +40,34 @@ Output:
  [ 0, 0, 1, 1, 0 ] ]
 
  */
-let input = [
-  [1, 0, 1, 1, 0],
-  [0, 1, 1, 1, 0],
-  [1, 1, 1, 1, 1],
-  [1, 0, 1, 1, 1],
-  [1, 1, 1, 1, 1],
-];
+// let input = [
+//   [1, 0, 1, 1, 0],
+//   [0, 1, 1, 1, 0],
+//   [1, 1, 1, 1, 1],
+//   [1, 0, 1, 1, 1],
+//   [1, 1, 1, 1, 1],
+// ];
 
-function makeZero(arr) {
-  const colArr = [],
-    rowArr = [];
-  for (let a = 0; a < arr.length; a++) {
-    for (let b = 0; b < arr[a].length; b++) {
-      if (arr[a][b] === 0) {
-        rowArr[a] = true;
-        colArr[b] = true;
-      }
-    }
-  }
-  for (let a = 0; a < arr.length; a++) {
-    for (let b = 0; b < arr[a].length; b++) {
-      if (colArr[b] || rowArr[a]) {
-        arr[a][b] = 0;
-      }
-    }
-  }
-  return arr;
-}
+// function makeZero(arr) {
+//   const colArr = [],
+//     rowArr = [];
+//   for (let a = 0; a < arr.length; a++) {
+//     for (let b = 0; b < arr[a].length; b++) {
+//       if (arr[a][b] === 0) {
+//         rowArr[a] = true;
+//         colArr[b] = true;
+//       }
+//     }
+//   }
+//   for (let a = 0; a < arr.length; a++) {
+//     for (let b = 0; b < arr[a].length; b++) {
+//       if (colArr[b] || rowArr[a]) {
+//         arr[a][b] = 0;
+//       }
+//     }
+//   }
+//   return arr;
+// }
 
 // console.log(makeZero(input));
 
